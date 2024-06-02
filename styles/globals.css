@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        /* These classes are tailwind CSS classes that can be used to style. note hover: can be used with any valid tailwind css. */
+        @apply bg-yellow-500 rounded-md px-4 py-2 text-white hover:bg-yellow-600 disabled:bg-yellow-200;
+    }
+    .side-menu-item {
+        @apply m-2 p-2 flex items-center gap-4 rounded-md hover:bg-gray-800;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    .b-chat-sidebar ::-webkit-scrollbar-track {
+        @apply bg-gray-950;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-600;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
